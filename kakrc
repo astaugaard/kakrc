@@ -122,7 +122,7 @@ set-option global autoreload yes
 # line flags #
 ##############
 
-add-highlighter global/ number-lines
+# add-highlighter global/number-lines number-lines
 # add-highlighter global/ show-whitespaces
 
 # declare-option line-specs cursorlinespec
@@ -349,4 +349,4 @@ hook global InsertCompletionShow .* %{
     }
 }
 
-# hook global BufCreate ^[^*]+$ %{ add-highlighter buffer/num-lines number-lines }
+hook global WinCreate .* %{ add-highlighter window/number-lines number-lines }
