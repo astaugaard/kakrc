@@ -1,0 +1,13 @@
+#!/usr/local/bin/fish
+
+while true
+    set FILEPATH (ls -a | fzf-tmux -p 30%,30% --reverse --prompt=(echo (basename (pwd))"> "))
+    if test $FILEPATH = '.'
+	echo (pwd) | sed "s/ //g"
+	break
+    else if test -d $FILEPATH
+        cd $FILEPATH
+    else
+        continue
+    end
+end

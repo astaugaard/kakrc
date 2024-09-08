@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat -n $1 | fzf --reverse | awk '{print $1}' > /tmp/kakoune-fzf-selection-$kak_client_pid

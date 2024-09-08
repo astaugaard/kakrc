@@ -1,0 +1,16 @@
+#!/usr/local/bin/fish
+
+while true
+    # set FILEPATH (ls -a | fzf-tmux -p 30%,30% --reverse --prompt=(echo (basename (pwd))"> "))
+    ls -a > "/tmp/fzf-input-$kak_client_pid"
+    ~/.config/kak/sh/fzf-window (echo (basename (pwd))"> ")
+
+    set FILEPATH (cat /tmp/kakoune-fzf-selection-$kak_client_pid)
+
+    if test -d $FILEPATH
+        cd $FILEPATH
+    else
+        echo (pwd)/$FILEPATH
+        break
+    end
+end

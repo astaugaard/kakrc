@@ -1,0 +1,3 @@
+#!/usr/local/bin/fish
+
+echo $argv[1..-1] | sed "s/ /\n/g" | fzf-tmux -p 30%,30% --reverse

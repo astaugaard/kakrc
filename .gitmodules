@@ -1,0 +1,12 @@
+[submodule "clipb.kak"]
+	path = clipb.kak
+	url = https://github.com/NNBnh/clipb.kak.git
+[submodule "libaries/clipb.kak"]
+	path = libaries/clipb.kak
+	url = https://github.com/NNBnh/clipb.kak.git
+[submodule "libaries/luar"]
+	path = libaries/luar
+	url = https://github.com/gustavo-hms/luar.git
+[submodule "libaries/peneira"]
+	path = libaries/peneira
+	url = https://github.com/gustavo-hms/peneira.git
