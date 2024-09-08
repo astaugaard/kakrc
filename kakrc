@@ -43,7 +43,7 @@ evaluate-commands %sh{
 }
 
 face global REasymotionBackground rgb:aaaaaa
-face global REasymotionForeground "rgb:%opt{foreground},rgb:%opt{pink}+F"
+face global REasymotionForeground "%opt{background},%opt{mauve}+F"
 
 # set-option global reasymotion_keys "aoeuidhtnsrcbk"
 
