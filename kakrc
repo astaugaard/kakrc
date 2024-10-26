@@ -299,6 +299,10 @@ hook global BufSetOption filetype=cpp,h %{
     set-option buffer formatcmd 'clang-format'
 }
 
+hook global BufSetOption filetype=nix %{
+    set-option buffer formatcmd 'nixfmt'
+}
+
 hook global BufSetOption filetype=yaml %{
     map buffer user L "S^[^ ]*|[\d.]*\)<ret><a-k> <ret>c-<esc>ghi- <esc>gld," -docstring "add latest version" 
     map buffer user C ' op"zZs^ <ret>wd<esc>"zz L' -docstring "add latest version from clipboard" 
