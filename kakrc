@@ -17,7 +17,7 @@
 ###########
 
 
-colorscheme catppuccin_mocha
+colorscheme catppuccin_macchiato
 eval %sh{kak-lsp --kakoune -s $kak_session}
 lsp-enable
 
