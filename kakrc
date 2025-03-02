@@ -69,12 +69,14 @@ declare-user-mode idris
 
 set-option global ui_options terminal_assistant=cat
 map global normal \' ':reasymotion-on-letter-to-word<ret>' -docstring "easymotion to word starting letter"
+map global normal \" ':reasymotion-on-letter-to-word-expand<ret>' -docstring "easymotion to word starting letter"
 
 map global user  c ':comment-line<ret>' -docstring 'comment line'
 map global user  w ':write<ret>' -docstring 'write file'
 map global user  b ':change-buffer-selection<ret>' -docstring 'change buffer'
 map global user l ':enter-user-mode lsp<ret>'
 map global user j ':reasymotion-line<ret>' -docstring "easymotion to a line"
+map global user J ':reasymotion-line-expand<ret>' -docstring "easymotion to a line"
 
 map global user  o ':enter-user-mode open<ret>' -docstring 'open'
 
