@@ -187,6 +187,10 @@ def test -params 0..10 %{
     }
 }
 
+def startTypstPreview -params 1 %{
+    lsp-execute-command tinymist.startDefaultPreview
+}
+
 def swipey %{
     write -force "/tmp/current_kak_file-%val{client_pid}"
 
@@ -326,6 +330,9 @@ hook global BufSetOption filetype=idris %{
     map buffer user i ":enter-user-mode idris<ret>"
 }
 
+hook global BufCreate .*[.]idr %{
+    set-option buffer filetype 'typst'
+}
 
 hook global BufSetOption filetype=haskell %{
     set-option buffer formatcmd 'fourmulo'
