@@ -19,6 +19,7 @@
 
 colorscheme catppuccin_macchiato
 eval %sh{kak-lsp --kakoune -s $kak_session}
+
 lsp-enable
 
 source ~/.config/kak/libaries/luar/luar.kak
@@ -188,7 +189,9 @@ def test -params 0..10 %{
 }
 
 def startTypstPreview -params 1 %{
-    lsp-execute-command tinymist.startDefaultPreview
+    nop %sh{
+      (kitty typst-live $1 &) >/dev/null 2>/dev/null
+    }
 }
 
 def swipey %{
@@ -330,7 +333,7 @@ hook global BufSetOption filetype=idris %{
     map buffer user i ":enter-user-mode idris<ret>"
 }
 
-hook global BufCreate .*[.]idr %{
+hook global BufCreate .*[.]typ %{
     set-option buffer filetype 'typst'
 }
 
